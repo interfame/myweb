@@ -1,0 +1,9 @@
+---
+import menu from "../data/menu.json";
+---
+<header>
+  <nav>
+    <strong>Product Header</strong>
+    {menu.map(item => <a href={item.url}>{item.label}</a>)}
+  </nav>
+</header>

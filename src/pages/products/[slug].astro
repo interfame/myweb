@@ -1,0 +1,8 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const { slug } = Astro.params;
+---
+<BaseLayout title={slug} headerVariant="product">
+  <h1>Product: {slug}</h1>
+  <p>Content comes from CMS.</p>
+</BaseLayout>

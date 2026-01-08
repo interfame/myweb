@@ -1,0 +1,18 @@
+---
+import HeaderDefault from "../components/HeaderDefault.astro";
+import HeaderProduct from "../components/HeaderProduct.astro";
+
+const { headerVariant = "default" } = Astro.props;
+---
+<html>
+  <head>
+    <title>{Astro.props.title || "Demo"}</title>
+  </head>
+  <body>
+    {headerVariant === "product" ? <HeaderProduct /> : <HeaderDefault />}
+    <main>
+      <slot />
+    </main>
+    <footer>Demo Footer</footer>
+  </body>
+</html>
